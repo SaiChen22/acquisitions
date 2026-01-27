@@ -129,3 +129,12 @@
 {"level":"info","message":"172.25.96.1 - - [27/Jan/2026:05:21:55 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 110 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
 {"level":"info","message":"User signed out","service":"user-service"}
 {"level":"info","message":"172.25.96.1 - - [27/Jan/2026:05:22:13 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
+{"level":"info","message":"172.25.96.1 - - [27/Jan/2026:05:56:27 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
+{"level":"info","message":"172.25.96.1 - - [27/Jan/2026:05:57:17 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
+{"level":"info","message":"172.25.96.1 - - [27/Jan/2026:05:57:17 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
+{"level":"info","message":"172.25.96.1 - - [27/Jan/2026:06:01:25 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
+{"level":"info","message":"172.25.96.1 - - [27/Jan/2026:06:01:26 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"insomnia/11.2.0\"","service":"user-service"}
+{"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
+{"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
+{"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
+{"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
