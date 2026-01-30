@@ -18,7 +18,6 @@ app.use(cookieParser());
 app.use(securityMiddleware);
 
 app.use(morgan('combined', { stream: {write: (message) => logger.info(message.trim()) }}));
-app.listen(5173, '0.0.0.0');
 
 app.get('/', (req, res) => {
     logger.info('Hello from Acquisitions Service!');
@@ -26,8 +25,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-    res.status(200).json({ status: 'OK', timestamp: new Date().toISOString(),uptime: process.uptime() });
+  res
+    .status(200)
+    .json({
+      status: 'OK',
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+    });
 });
+
 
 app.get('/api', (req, res) => {
     res.status(200).json({ message: 'Acquisitions Service API', version: '1.0.0' });
@@ -35,5 +41,9 @@ app.get('/api', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users',usersRoutes);
+
+app.use((req,res)=>{
+    res.status(404).json({error: 'Not Found', message: 'The requested resource was not found' });
+});
 
 export default app;

@@ -138,3 +138,12 @@
 {"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
 {"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
 {"ip":"172.25.96.1","level":"warn","message":"Rate limit exceeded:","service":"user-service","userAgent":"insomnia/11.2.0"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:46:20 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:46:20 +0000] \"GET /api HTTP/1.1\" 200 56 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:46:20 +0000] \"GET /nonexistent HTTP/1.1\" 404 70 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:48:29 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:48:29 +0000] \"GET /api HTTP/1.1\" 200 56 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:48:29 +0000] \"GET /nonexistent HTTP/1.1\" 404 70 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:52:17 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:52:17 +0000] \"GET /api HTTP/1.1\" 200 56 \"-\" \"-\"","service":"user-service"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Jan/2026:20:52:17 +0000] \"GET /nonexistent HTTP/1.1\" 404 70 \"-\" \"-\"","service":"user-service"}
