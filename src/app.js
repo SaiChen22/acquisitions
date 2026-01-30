@@ -17,33 +17,41 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(securityMiddleware);
 
-app.use(morgan('combined', { stream: {write: (message) => logger.info(message.trim()) }}));
+app.use(
+  morgan('combined', {
+    stream: { write: message => logger.info(message.trim()) },
+  })
+);
 
 app.get('/', (req, res) => {
-    logger.info('Hello from Acquisitions Service!');
-    res.status(200).send('Hello, World!');
+  logger.info('Hello from Acquisitions Service!');
+  res.status(200).send('Hello, World!');
 });
 
 app.get('/health', (req, res) => {
-  res
-    .status(200)
-    .json({
-      status: 'OK',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-    });
+  res.status(200).json({
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+  });
 });
 
-
 app.get('/api', (req, res) => {
-    res.status(200).json({ message: 'Acquisitions Service API', version: '1.0.0' });
+  res
+    .status(200)
+    .json({ message: 'Acquisitions Service API', version: '1.0.0' });
 });
 
 app.use('/api/auth', authRoutes);
-app.use('/api/users',usersRoutes);
+app.use('/api/users', usersRoutes);
 
-app.use((req,res)=>{
-    res.status(404).json({error: 'Not Found', message: 'The requested resource was not found' });
+app.use((req, res) => {
+  res
+    .status(404)
+    .json({
+      error: 'Not Found',
+      message: 'The requested resource was not found',
+    });
 });
 
 export default app;

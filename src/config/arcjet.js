@@ -1,6 +1,5 @@
 import arcjet, { shield, detectBot, slidingWindow } from '@arcjet/node';
 
-
 const aj = arcjet({
   // Get your site key from https://app.arcjet.com and set it as an environment
   // variable rather than hard coding.
@@ -21,11 +20,11 @@ const aj = arcjet({
       ],
     }),
     slidingWindow({
-        mode: 'LIVE', // Enforce rate limits. Use 'DRY_RUN' to log only
-        interval: 60, // Time window in seconds
-        max:5
+      mode: 'LIVE', // Enforce rate limits. Use 'DRY_RUN' to log only
+      interval: 60, // Time window in seconds
+      max: 5,
     }),
-]
+  ],
 });
 
 export default aj;
